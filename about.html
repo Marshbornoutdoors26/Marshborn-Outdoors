@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>About Us | Marshborn Outdoors</title>
+
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  background:#080a0c;
+  color:#e0dcd1;
+  font-family:Arial,Helvetica,sans-serif;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+header{
+  height:82px;
+  background:#0d0f10;
+  border-bottom:1px solid #3f3a31;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 42px;
+}
+
+.brand{
+  font-family:Georgia,serif;
+  font-weight:bold;
+  font-size:25px;
+  letter-spacing:3px;
+}
+
+nav{
+  display:flex;
+  gap:38px;
+  font-size:14px;
+  letter-spacing:1.5px;
+  font-weight:bold;
+}
+
+nav a:hover{
+  color:#b58f5b;
+}
+
+.hero{
+  min-height:350px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  background:
+    radial-gradient(circle at center,rgba(181,143,91,.10),transparent 48%),
+    #080a0c;
+}
+
+.hero h1{
+  font-family:Georgia,serif;
+  font-size:clamp(48px,7vw,78px);
+  letter-spacing:7px;
+}
+
+.hero p{
+  color:#b58f5b;
+  margin-top:18px;
+  font-size:14px;
+  font-weight:bold;
+  letter-spacing:4px;
+}
+
+.hero-line{
+  width:250px;
+  height:1px;
+  background:#b58f5b;
+  margin-top:28px;
+}
+
+.about{
+  max-width:1100px;
+  margin:auto;
+  padding:85px 35px 110px;
+}
+
+.story{
+  background:#0f1111;
+  border:1px solid #494339;
+  border-radius:6px;
+  padding:65px;
+}
+
+.story h2{
+  font-family:Georgia,serif;
+  font-size:36px;
+  letter-spacing:3px;
+  margin-bottom:30px;
+}
+
+.story h2 span{
+  color:#b58f5b;
+}
+
+.story p{
+  color:#a39d91;
+  font-size:16px;
+  line-height:1.9;
+  margin-bottom:22px;
+}
+
+.divider{
+  width:100px;
+  height:2px;
+  background:#b58f5b;
+  margin:40px 0;
+}
+
+.values{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+  margin-top:45px;
+}
+
+.value{
+  background:#0b0d0e;
+  border:1px solid #38342d;
+  padding:35px 25px;
+  text-align:center;
+}
+
+.value h3{
+  font-family:Georgia,serif;
+  font-size:20px;
+  letter-spacing:2px;
+  margin-bottom:15px;
+}
+
+.value p{
+  font-size:13px;
+  line-height:1.7;
+  margin:0;
+}
+
+.cta{
+  text-align:center;
+  margin-top:75px;
+}
+
+.cta h2{
+  font-family:Georgia,serif;
+  font-size:32px;
+  letter-spacing:3px;
+}
+
+.cta p{
+  color:#8b8579;
+  margin:15px 0 28px;
+}
+
+.button{
+  display:inline-block;
+  border:1px solid #b58f5b;
+  padding:14px 28px;
+  color:#b58f5b;
+  font-size:11px;
+  font-weight:bold;
+  letter-spacing:2px;
+}
+
+.button:hover{
+  background:#b58f5b;
+  color:#080a0c;
+}
+
+footer{
+  border-top:1px solid #3f3a31;
+  padding:45px 20px;
+  text-align:center;
+  color:#706b61;
+  font-size:12px;
+  letter-spacing:1px;
+}
+
+@media(max-width:800px){
+  nav{
+    display:none;
+  }
+
+  header{
+    padding:0 20px;
+  }
+
+  .story{
+    padding:40px 28px;
+  }
+
+  .values{
+    grid-template-columns:1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+  <a href="index.html" class="brand">
+    MARSHBORN
+  </a>
+
+  <nav>
+    <a href="index.html">HOME</a>
+    <a href="shop.html">SHOP</a>
+    <a href="collections.html">COLLECTIONS</a>
+    <a href="about.html">ABOUT</a>
+    <a href="contact.html">CONTACT</a>
+  </nav>
+
+</header>
+
+
+<section class="hero">
+
+  <h1>OUR STORY</h1>
+
+  <p>BUILT FROM A DREAM</p>
+
+  <div class="hero-line"></div>
+
+</section>
+
+
+<main class="about">
+
+  <section class="story">
+
+    <h2>
+      IT ALL STARTED WITH A <span>GOPRO</span> AND A DREAM.
+    </h2>
+
+    <div class="divider"></div>
+
+    <p>
+      Me and my crew here at Marshborn have been raised in the outdoors.
+      We've been taught how to hunt, fish, and survive in a world where
+      those values are typically forgotten.
+    </p>
+
+    <p>
+      What started with a GoPro and a dream has grown into something
+      bigger than we ever imagined. Marshborn Outdoors was built around
+      the places we love, the traditions we were raised on, and the
+      people who continue to share those passions with us.
+    </p>
+
+    <p>
+      We're small now, but we have a growth mindset. Every order,
+      follow, share, and piece of support means more to us than you
+      probably realize.
+    </p>
+
+    <p>
+      We truly appreciate any and all business. This is a dream come
+      true for us, and we're just getting started.
+    </p>
+
+
+    <div class="values">
+
+      <div class="value">
+        <h3>HUNT</h3>
+        <p>
+          Respect the outdoors, preserve the traditions,
+          and appreciate every opportunity.
+        </p>
+      </div>
+
+      <div class="value">
+        <h3>FISH</h3>
+        <p>
+          From the marsh to the open water,
+          chase the next adventure.
+        </p>
+      </div>
+
+      <div class="value">
+        <h3>REPRESENT</h3>
+        <p>
+          Wear it with pride. Represent where
+          you came from and what you stand for.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section class="cta">
+
+    <h2>WELCOME TO MARSHBORN</h2>
+
+    <p>
+      Built for those who represent.
+    </p>
+
+    <a href="collections.html" class="button">
+      EXPLORE COLLECTIONS
+    </a>
+
+  </section>
+
+</main>
+
+
+<footer>
+
+  © 2026 MARSHBORN OUTDOORS — BUILT FOR THOSE WHO REPRESENT.
+
+</footer>
+
+</body>
+</html>
