@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Marshborn Outdoors</title>
+  <meta name="description" content="Marshborn Outdoors — Built for those who represent.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #080a0c;
+      color: #e0dcd1;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* HEADER */
+    header {
+      height: 82px;
+      background: #0d0f10;
+      border-bottom: 1px solid #3f3a31;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 42px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .brand {
+      font-family: Georgia, serif;
+      font-weight: bold;
+      font-size: 25px;
+      letter-spacing: 3px;
+      color: #e0dcd1;
+      white-space: nowrap;
+    }
+
+    nav {
+      display: flex;
+      gap: 38px;
+      align-items: center;
+      font-size: 14px;
+      letter-spacing: 1.5px;
+      font-weight: bold;
+    }
+
+    nav a {
+      transition: color .2s ease;
+    }
+
+    nav a:hover {
+      color: #b58f5b;
+    }
+
+    .nav-icons {
+      display: flex;
+      gap: 18px;
+      font-size: 20px;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 420px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 50% 45%, rgba(181,143,91,.08), transparent 38%),
+        linear-gradient(180deg, #090b0d 0%, #0c0f11 100%);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: .12;
+      background-image:
+        repeating-linear-gradient(
+          0deg,
+          transparent 0px,
+          transparent 9px,
+          rgba(255,255,255,.03) 10px
+        );
+      pointer-events: none;
+    }
+
+    .hero h1 {
+      position: relative;
+      font-family: Georgia, serif;
+      font-size: clamp(48px, 7vw, 88px);
+      letter-spacing: 8px;
+      line-height: 1;
+      color: #e0dcd1;
+      text-transform: uppercase;
+    }
+
+    .hero p {
+      position: relative;
+      margin-top: 28px;
+      color: #b58f5b;
+      font-size: 17px;
+      letter-spacing: 4px;
+      font-weight: bold;
+    }
+
+    .hero-line {
+      width: 290px;
+      height: 1px;
+      background: #b58f5b;
+      margin-top: 28px;
+    }
+
+    /* COLLECTIONS */
+    .collections {
+      padding: 72px 4%;
+      max-width: 1500px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 42px;
+    }
+
+    .section-title h2 {
+      font-family: Georgia, serif;
+      font-size: 34px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+    }
+
+    .section-title p {
+      margin-top: 12px;
+      color: #8b8579;
+      letter-spacing: 2px;
+      font-size: 13px;
+    }
+
+    .collection-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 18px;
+    }
+
+    .collection-card {
+      min-height: 300px;
+      background: #0f1111;
+      border: 1px solid #494339;
+      border-radius: 6px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 34px 20px 24px;
+      text-align: center;
+      transition: transform .25s ease, border-color .25s ease;
+    }
+
+    .collection-card:hover {
+      transform: translateY(-5px);
+      border-color: #b58f5b;
+    }
+
+    .collection-card .top-line {
+      width: 70%;
+      height: 2px;
+      background: #b58f5b;
+      margin: 0 auto;
+    }
+
+    .collection-card h3 {
+      font-size: 23px;
+      letter-spacing: 2px;
+      margin-top: 25px;
+    }
+
+    .collection-card p {
+      color: #8b8579;
+      font-size: 12px;
+      letter-spacing: 1.5px;
+      margin-top: 18px;
+    }
+
+    .collection-card span {
+      color: #b58f5b;
+      font-weight: bold;
+      font-size: 12px;
+      letter-spacing: 2px;
+    }
+
+    /* BRAND SECTION */
+    .brand-section {
+      margin: 15px 4% 80px;
+      border: 1px solid #494339;
+      border-radius: 6px;
+      background: #0f1111;
+      padding: 60px 7%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .brand-section h2 {
+      font-family: Georgia, serif;
+      font-size: 39px;
+      line-height: 1.15;
+      letter-spacing: 2px;
+    }
+
+    .brand-section h2 span {
+      color: #b58f5b;
+    }
+
+    .brand-section p {
+      color: #8b8579;
+      line-height: 1.8;
+      font-size: 15px;
+      margin-top: 22px;
+    }
+
+    .brand-right {
+      text-align: center;
+      border-left: 1px solid #494339;
+      padding-left: 50px;
+    }
+
+    .brand-right h3 {
+      font-size: 19px;
+      letter-spacing: 3px;
+      color: #8b8579;
+    }
+
+    .brand-right strong {
+      display: block;
+      font-family: Georgia, serif;
+      color: #e0dcd1;
+      font-size: 35px;
+      margin: 18px 0 30px;
+    }
+
+    .button {
+      display: inline-block;
+      border: 1px solid #b58f5b;
+      padding: 15px 28px;
+      color: #b58f5b;
+      font-weight: bold;
+      font-size: 12px;
+      letter-spacing: 2px;
+      transition: all .2s ease;
+    }
+
+    .button:hover {
+      background: #b58f5b;
+      color: #080a0c;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid #3f3a31;
+      padding: 50px 6%;
+      background: #090b0c;
+    }
+
+    .footer-grid {
+      max-width: 1300px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px;
+    }
+
+    footer h3 {
+      font-family: Georgia, serif;
+      letter-spacing: 2px;
+      margin-bottom: 18px;
+    }
+
+    footer p,
+    footer a {
+      display: block;
+      color: #8b8579;
+      font-size: 13px;
+      line-height: 2;
+    }
+
+    footer a:hover {
+      color: #b58f5b;
+    }
+
+    .copyright {
+      max-width: 1300px;
+      margin: 40px auto 0;
+      padding-top: 25px;
+      border-top: 1px solid #292722;
+      color: #625e55;
+      font-size: 11px;
+      letter-spacing: 1px;
+    }
+
+    /* MOBILE */
+    @media (max-width: 900px) {
+      header {
+        padding: 0 20px;
+      }
+
+      nav {
+        display: none;
+      }
+
+      .collection-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .brand-section {
+        grid-template-columns: 1fr;
+      }
+
+      .brand-right {
+        border-left: none;
+        border-top: 1px solid #494339;
+        padding: 35px 0 0;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .collection-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+        letter-spacing: 4px;
+      }
+
+      .hero p {
+        font-size: 13px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <a href="index.html" class="brand">MARSHBORN</a>
+
+    <nav>
+      <a href="index.html">HOME</a>
+      <a href="#collections">SHOP</a>
+      <a href="#collections">COLLECTIONS</a>
+      <a href="about.html">ABOUT</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+
+    <div class="nav-icons">
+      <span>⌕</span>
+      <span>♙</span>
+      <span>🛒</span>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>MARSHBORN OUTDOORS</h1>
+    <p>BUILT FOR THOSE WHO REPRESENT.</p>
+    <div class="hero-line"></div>
+  </section>
+
+  <!-- COLLECTIONS -->
+  <section class="collections" id="collections">
+
+    <div class="section-title">
+      <h2>Shop Our Collections</h2>
+      <p>FIND YOUR PURSUIT</p>
+    </div>
+
+    <div class="collection-grid">
+
+      <a href="waterfowl.html" class="collection-card">
+        <div>
+          <div class="top-line"></div>
+          <h3>WATERFOWL</h3>
+          <p>HUNT THE MARSH</p>
+        </div>
+        <span>EXPLORE</span>
+      </a>
+
+      <a href="deer.html" class="collection-card">
+        <div>
+          <div class="top-line"></div>
+          <h3>DEER</h3>
+          <p>INTO THE WOODS</p>
+        </div>
+        <span>EXPLORE</span>
+      </a>
+
+      <a href="turkey.html" class="collection-card">
+        <div>
+          <div class="top-line"></div>
+          <h3>TURKEY</h3>
+          <p>CHASE THE SPRING</p>
+        </div>
+        <span>EXPLORE</span>
+      </a>
+
+      <a href="bowfishing.html" class="collection-card">
+        <div>
+          <div class="top-line"></div>
+          <h3>BOWFISHING</h3>
+          <p>ON THE WATER</p>
+        </div>
+        <span>EXPLORE</span>
+      </a>
+
+      <a href="signature.html" class="collection-card">
+        <div>
+          <div class="top-line"></div>
+          <h3>SIGNATURE</h3>
+          <p>THE MARSHBORN STANDARD</p>
+        </div>
+        <span>EXPLORE</span>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- BRAND SECTION -->
+  <section class="brand-section">
+
+    <div>
+      <h2>
+        MORE THAN A BRAND.<br>
+        <span>IT'S A LIFESTYLE.</span>
+      </h2>
+
+      <p>
+        From the marsh to the mountains, we live for the chase,
+        the thrill, and the tradition. Marshborn Outdoors is built
+        for those who put in the work and represent every time
+        they step outside.
+      </p>
+    </div>
+
+    <div class="brand-right">
+      <h3>EXPLORE THE</h3>
+      <strong>COLLECTIONS</strong>
+      <a href="#collections" class="button">EXPLORE COLLECTIONS</a>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="footer-grid">
+
+      <div>
+        <h3>MARSHBORN OUTDOORS</h3>
+        <p>Built for those who represent.</p>
+        <p>Hunt. Fish. Explore.</p>
+      </div>
+
+      <div>
+        <h3>SHOP</h3>
+        <a href="#collections">Collections</a>
+        <a href="waterfowl.html">Waterfowl</a>
+        <a href="deer.html">Deer</a>
+        <a href="turkey.html">Turkey</a>
+        <a href="bowfishing.html">Bowfishing</a>
+        <a href="signature.html">Signature</a>
+      </div>
+
+      <div>
+        <h3>MARSHBORN</h3>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div>
+        <h3>FOLLOW</h3>
+        <a href="https://www.tiktok.com/@Marshbornoutdoors26" target="_blank">TikTok</a>
+        <a href="https://www.youtube.com/@Marshbornoutdoors26" target="_blank">YouTube</a>
+        <a href="mailto:Sjones@marshbornoutdoor.com">Business Email</a>
+        <a href="mailto:Service@marshbornoutdoor.com">Customer Service</a>
+      </div>
+
+    </div>
+
+    <div class="copyright">
+      © 2026 MARSHBORN OUTDOORS. ALL RIGHTS RESERVED.
+    </div>
+
+  </footer>
+
+</body>
+</html>
