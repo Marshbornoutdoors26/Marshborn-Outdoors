@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Collections | Marshborn Outdoors</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #080a0c;
+      color: #e0dcd1;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    header {
+      height: 82px;
+      background: #0d0f10;
+      border-bottom: 1px solid #3f3a31;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 42px;
+    }
+
+    .brand {
+      font-family: Georgia, serif;
+      font-weight: bold;
+      font-size: 25px;
+      letter-spacing: 3px;
+    }
+
+    nav {
+      display: flex;
+      gap: 38px;
+      font-size: 14px;
+      letter-spacing: 1.5px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #b58f5b;
+    }
+
+    .page-title {
+      text-align: center;
+      padding: 95px 20px 60px;
+      background:
+        radial-gradient(circle at center, rgba(181,143,91,.08), transparent 45%),
+        #080a0c;
+    }
+
+    .page-title h1 {
+      font-family: Georgia, serif;
+      font-size: clamp(45px, 7vw, 76px);
+      letter-spacing: 7px;
+    }
+
+    .page-title p {
+      margin-top: 20px;
+      color: #b58f5b;
+      letter-spacing: 4px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .collections {
+      max-width: 1350px;
+      margin: auto;
+      padding: 20px 35px 100px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .collection {
+      min-height: 360px;
+      background: #0f1111;
+      border: 1px solid #494339;
+      border-radius: 6px;
+      padding: 45px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: center;
+      transition: .25s ease;
+    }
+
+    .collection:hover {
+      border-color: #b58f5b;
+      transform: translateY(-5px);
+    }
+
+    .collection .line {
+      width: 100px;
+      height: 2px;
+      background: #b58f5b;
+      margin: auto;
+    }
+
+    .collection h2 {
+      font-family: Georgia, serif;
+      font-size: 32px;
+      letter-spacing: 3px;
+      margin: 25px 0 12px;
+    }
+
+    .collection p {
+      color: #8b8579;
+      letter-spacing: 2px;
+      font-size: 13px;
+    }
+
+    .collection span {
+      color: #b58f5b;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .signature {
+      grid-column: 1 / -1;
+      min-height: 300px;
+    }
+
+    footer {
+      border-top: 1px solid #3f3a31;
+      padding: 45px 20px;
+      text-align: center;
+      color: #706b61;
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+
+    @media (max-width: 700px) {
+      header {
+        padding: 0 20px;
+      }
+
+      nav {
+        display: none;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .signature {
+        grid-column: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <a href="index.html" class="brand">MARSHBORN</a>
+
+  <nav>
+    <a href="index.html">HOME</a>
+    <a href="index.html#collections">SHOP</a>
+    <a href="collections.html">COLLECTIONS</a>
+    <a href="about.html">ABOUT</a>
+    <a href="contact.html">CONTACT</a>
+  </nav>
+</header>
+
+<section class="page-title">
+  <h1>COLLECTIONS</h1>
+  <p>FIND YOUR PURSUIT</p>
+</section>
+
+<section class="collections">
+
+  <div class="grid">
+
+    <a href="waterfowl.html" class="collection">
+      <div>
+        <div class="line"></div>
+        <h2>WATERFOWL</h2>
+        <p>HUNT THE MARSH</p>
+      </div>
+      <span>EXPLORE COLLECTION →</span>
+    </a>
+
+    <a href="deer.html" class="collection">
+      <div>
+        <div class="line"></div>
+        <h2>DEER</h2>
+        <p>INTO THE WOODS</p>
+      </div>
+      <span>EXPLORE COLLECTION →</span>
+    </a>
+
+    <a href="turkey.html" class="collection">
+      <div>
+        <div class="line"></div>
+        <h2>TURKEY</h2>
+        <p>CHASE THE SPRING</p>
+      </div>
+      <span>EXPLORE COLLECTION →</span>
+    </a>
+
+    <a href="bowfishing.html" class="collection">
+      <div>
+        <div class="line"></div>
+        <h2>BOWFISHING</h2>
+        <p>ON THE WATER</p>
+      </div>
+      <span>EXPLORE COLLECTION →</span>
+    </a>
+
+    <a href="signature.html" class="collection signature">
+      <div>
+        <div class="line"></div>
+        <h2>SIGNATURE</h2>
+        <p>THE MARSHBORN STANDARD</p>
+      </div>
+      <span>EXPLORE COLLECTION →</span>
+    </a>
+
+  </div>
+
+</section>
+
+<footer>
+  © 2026 MARSHBORN OUTDOORS — BUILT FOR THOSE WHO REPRESENT.
+</footer>
+
+</body>
+</html>
